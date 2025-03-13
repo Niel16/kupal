@@ -1,0 +1,454 @@
+*{
+  text-decoration:none;
+  list-style: none;
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+  scroll-behavior:smooth;
+}
+body{
+    background-image:linear-gradient(rgba(78,44,11,0.1),rgba(22,55,66,0.2)),url("img/balana.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+header{
+    position:fixed;
+    top:-100px;
+    width:100%;
+    height:100px;
+    background-color:#C3BAA4;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    z-index:99;
+    position:fixed;
+    box-shadow:0 0 10px 2px rgba(0,0,0,0.5);
+    
+  
+}
+.lag{
+    background-color: #254086;
+    display: inline-block;
+    color:#C3BAA4;
+    padding:3px 3px;
+    border-radius:10px;
+    font-size:25px;
+    
+}
+
+
+header .logo{
+    flex:1;
+    margin-left:50px;
+    text-transform:uppercase;
+    color:black;
+    text-shadow:-3px 4px 4px rgba(0,0,0,10);
+    z-index:-10;
+   
+    
+}
+header ul{
+    
+    color:white;
+    
+    
+    
+}
+header ul li{
+    padding:0 25px;
+    display:inline-block;
+    position:relative;
+    right:11em;
+    text-transform: capitalize;
+}
+header ul li a {
+    color:#254086;
+    font-size:15px;
+    transition:0.3s;
+  
+  
+    
+}
+header ul li a:hover{
+    color:#C3BAA4;
+    background-color: #254086;
+   
+}
+.g{
+
+    
+    position:relative;
+    left:150px;
+    padding:2px 20px;
+    transition:0.3s;
+    text-transform:uppercase;
+   
+}
+.g:hover{
+    color:#C3BAA4;
+    background-color:transparent;
+    
+    
+}
+header .menu{
+    position:relative;
+    right:5px;
+}
+.dropdown_menu{
+    display:none;
+    transition:right 1s ease;
+}
+
+header ul li:hover .dropdown_menu{
+    display:block;
+    position:absolute;
+    left:20px;
+    top:100%;
+    background-color:#c3baa4f1;
+    width:100px;
+    height:20vh;
+    border-bottom-right-radius:10px;
+    border-top-right-radius:10px;
+    border-bottom-left-radius:10px;
+    box-shadow:3px 3px 2px 3px rgba(0,0,0,0.5);
+}
+
+.dropdown_menu ul a{
+  display:block;
+  color:white;
+   
+
+}
+
+.dropdown_menu ul li{
+    position:relative;
+    left:10px;
+    top:15px;
+    padding:5px 10px;
+    transition:1s ease-in-out;
+}
+
+.dropdown_sec{
+    display:none;
+}
+.dropdown_menu ul li:hover .dropdown_sec{
+    position:absolute;
+    left:80px;
+    top:2px;
+    background-color:rgba(0, 0, 0, 0.473);
+    display:block;
+    width:100px;
+    height:45vh;
+    cursor: pointer;
+   
+}
+.dropdown_sec ul a{
+    display:block;
+    color:rgb(245, 242, 242);
+}
+.dropdown_sec li a{
+    padding:0px 30px;
+    position:relative;
+    right:17px;
+    top:-10px;
+    
+}
+
+
+.dev p{
+    position:absolute;
+    left:46%;
+    top:50%;
+    transform: translate(-46%, -50%);
+    color:#C3BAA4;
+    font-size:55px;
+    text-shadow:0 0 10px rgba(196, 206, 209, 0.9);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-transform: uppercase;
+}
+.dev button{
+    cursor: pointer;
+    position:absolute;
+    left:50%;
+    top:60%;
+    transform: translate(-50%, -60%);
+    background-color:rgba(82, 77, 77, 0.699);
+    padding:5px 3px;
+    color:#C3BAA4;
+    font-family: 'Times New Roman', Times, serif;
+    border:1px solid rgba(0,0,0,0.3);
+    text-shadow:0 0 10px rgba(196,206,209,0.9);
+    box-shadow: 0 0 10px 1px rgba(0,0,0,0.3);
+    transition:0.5s;
+    
+}
+.dev button:hover{
+    color:white;
+    background-color:rgba(0,0,0,0.5);
+}
+.down{
+    display:none;
+}
+.dev span:hover .down{
+    display:block;
+    cursor: pointer;
+    position:absolute;
+    left:50%;
+    top:67%;
+    transform: translate(-50%, -67%);
+    background-color:rgba(82, 77, 77, 0.699);
+    font-size:10px;
+    font-family:arial;
+    border:1px solid rgba(0,0,0,0.1);
+    transition:1s;
+    
+
+}
+.down ul li{
+    padding:2px 3px;
+    text-align:center;
+}
+.down a{
+    color:#C3BAA4;
+    transition:0.4s ease-in-out;
+    text-shadow:0 0 10px rgba(196,206,209,0.4);
+}
+.down a:hover{
+    color:white;
+}
+#chck{
+    display:none;
+}
+label #bars ,label #ex{
+    position:absolute;
+    top:9px;
+    cursor:pointer;
+} 
+label #bars{
+    font-size:30px;
+    left:10px;
+    padding:3px 10px;
+    background-color:bisque;
+    border-radius:10px;
+    position:fixed;
+    margin-top:10px;
+    transition:all .5s ease-in-out;
+    
+}
+label #ex{
+    top:-50px;
+    font-size:20px;
+    left:10px;
+    font-size:30px;
+    z-index:1000;
+    color:rgba(0,0,0,0.5);
+    transition:all .5s ease-in;
+    
+}
+#chck:checked ~ header{
+    position:absolute;
+    top:0;
+    transition:all .5s ease-in-out; 
+    position:fixed;
+}
+#chck:checked ~ label #bars{
+    opacity:0;
+    pointer-events:none;
+    top:100px;
+    position:fixed;
+    
+}
+#chck:checked ~ label #ex{
+   top:10px;
+   position:fixed;
+}
+#section2{
+    width:100%;
+    
+   
+   
+}
+
+#section2{
+    background-color:#C3BAA4;
+    margin-top:40em;
+    width:100%;
+    height:120vh;
+}
+#section2 h3{
+    color:#254086;
+    text-align:center;
+    padding-top:10px;
+    font-family:cursive;
+    opacity:0.5;
+}
+.new img{
+    width:300px;
+    height:40vh;
+    position:relative;
+    left:30.2em;
+    top:15px;
+    border-radius:200px;
+    box-shadow: rgba(0, 0, 0, 0.7) 0px 10px 20px -5px;
+}
+.Name{
+   position:relative;
+   text-align:center;
+   top:25px;
+   font-family:Impact;
+   color:#254086;
+   
+}
+.pagbati{
+    margin-top:50px;
+    margin-left:20em;
+    margin-right:20em;
+    text-align:justify;
+    line-height:20px;
+    color: #254086;
+    font-family:Helvetica;
+}
+#section2 p{
+    margin:20px 0 0 ;
+    line-height:5px;
+    font-size:18px;
+    color: #254086;
+    text-transform:uppercase;
+    text-align:center;
+
+   
+}  
+.image{
+             
+    padding-right:100px;
+    text-align:center;
+}
+.image img{
+ position:relative;
+ display: inline-block;
+ left:3.8em;
+
+ top:-1.1em;
+
+ 
+ 
+}
+
+.socialm li a:hover{
+    background-color:#254086;
+}
+#ins:hover{
+   color:#E4405F;
+}
+#twit:hover{
+    color:#1dcaff;
+}
+#fb:hover{
+    color:black;
+}
+.file{
+    text-align:center;
+}
+.file button{
+    padding:10px 10px;
+    margin-left:20px;
+    width:250px;
+    background-color:#254086;
+    font-weight:900;
+    color:#C3BAA4;
+    border:3px solid rgba(0,0,0,0.8);
+    transition:0.5 ease-in-out;
+    box-shadow:0 0 10px 1px rgba(0,0,0,0.5);
+}
+.file button:hover{
+    border:2px solid rgba(0,0,0,0.8);
+    background-color:#254075;
+}
+.footer{
+    color:white;
+    font-size:13px;
+    text-align:center;
+}
+.cons{
+    position: absolute;
+    left:30%;
+    top:20%;
+    transform: translate(-30% -20%);
+    background-color:#C3BAA4;
+    width:500px;
+    height:65vh;
+    border-radius:20px;
+    color:#254075;
+    box-shadow:0 0 5px 3px rgba(0,0,0,0.5);
+}
+.cons form{
+    margin-top:20px;
+}
+.cons h3{
+    text-align:center;
+    position:relative;
+    top:-20px;
+
+}
+
+.cons label{
+    position:relative;
+    left:260px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size:12px;
+}
+.cons input{
+   position:relative;
+   left:260px;
+    display:block;
+    width:200px;
+    height:5vh; 
+    
+    background-color:rgba(0,0,0,0.5);
+    color:#C3BAA4;
+    border:1px solid rgba(0,0,0,0.3);
+}
+.cons input:hover{
+    background-color:#254075;
+}
+.cons input:focus{
+    background-color:#254075;
+    outline:none;
+}
+.cons textarea{
+    position:relative;
+    left:260px;
+    top:10px;
+    resize:none;
+    background-color:rgba(0,0,0,0.5);
+    color:white;
+    border:1px solid rgba(0,0,0,0.3);
+}
+.cons textarea:hover{
+    background-color:#254075;
+}
+.cons textarea:focus{
+    background-color:#254075;
+    outline:none;
+}
+.cons h1{
+    position:absolute;
+    bottom:10em;
+    left:1.1em;
+    text-transform: uppercase;
+    font-size:21px;
+    line-height:30px;
+    text-shadow:1px 1px 2px rgba(233, 228, 228, 0.7);
+}
+.cons button{
+    position:absolute;
+    bottom:50px;
+    right:38px;
+    padding:5px 3px;
+    background-color: #254075;
+    color:white;
+    transition:0.6s ease;
+}
+.cons button:hover{
+    background-color:green;
+}
